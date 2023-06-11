@@ -1,0 +1,6 @@
+note: all the middleware are executed in the way that is defined in the code.
+
+so, when we run an code the app file will also be execute 
+as being related on above statement 
+when certain url reaches at the bottom of the "app.all" it means then url isn't being 
+defined anywhere in the code then the bottom "app.use" code will run 

@@ -1,0 +1,2 @@
+in order to get rid of try catch blocks we simply wrapped our async function inside of catchAsync function that we just created
+then this function will return an anynomous function which will be assigned to createTour. 

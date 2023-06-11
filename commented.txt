@@ -1,0 +1,113 @@
+error creating file
+
+1. on tourRoute
+tourRouter.route('/tour-stats')
+      .get(tourController.getTourStats);
+router.route('/monthly-plan/:year')
+      .get(tourController.getMonthlyPlan);
+  
+
+
+2. on tourModel
+{
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+}
+
+tourSchema.virtual('durationWeeks').get(function () {
+  return this.duration / 7;
+});
+
+
+tourController ko saka santan
+
+/* how this gonna work:- 
+            ABOVE WILL SET THE PROPERTY OF QUERY OBJECT {queryObj} TO THOSE VALUE THAT WE SPECIFY ABOVE */
+
+// const importantCommentsAndPointToRemember = () => {
+//     /* const tours = await Tour.find().where('duration').equals(5).where('difficulty').equals('easy'); //first method */
+//     /* const tours = await Tour.find({
+//            difficulty: "easy",
+//            duration: 5
+//        });
+//       */
+//     /*
+//            //  BUILDING QUERY
+//            //    1 FILTERING = 1A
+//            const queryObj = { ...req.query };
+//            const excludeFields = ['page', 'sort', 'limit', 'fields'];
+//            excludeFields.forEach(el => delete queryObj[el]);
+
+//            //    ADVANCE FILTERING = 1B
+//            let queryStr = JSON.stringify(queryObj);           //converts json file into js object
+//            queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`)           // replaces the entry point and addes $ at the last
+
+//            // EXCLUDE QUERY
+//            let query = Tour.find(JSON.parse(queryStr));
+//        */
+//     /*
+//           //2 SOTRING 1A
+//           if(req.query.sort){
+
+//               const sortBy = req.query.sort.split(',').join(' ');
+//               //    this brakdown the assigned sort into two piece
+//               query = query.sort(sortBy)
+
+//           }else{
+//               query = query.sort('createdAt');
+//           }
+//       */
+//     /*
+//       // 3 FIELDS
+//       if(req.query.fields){
+//           const fields = req.query.fields.split(',').join(' ');
+
+//           query = query.select(fields);
+//       }else {
+//           query = query.select('-__v');
+//           // The meaning of - in fields is not to include (exclude)
+//           // which means include everythings which is given in URL but don't include those stuff which has 'negative' notation
+//           // we can remove the data viewing from schema just by
+//               //   'select : false'
+//       }
+//       */
+//     /*
+//       // 4 PAGINATION
+//       const page = req.query.page * 1;
+//       const limit = req.query.limit * 1;
+//       const skipPage = (page - 1) * limit;
+
+//       query = query.skip(skipPage).limit(limit);
+
+//       if(req.query.page){
+//           const maxTour = await Tour.countDocuments();
+//           if(skip >= maxTour){
+//               throw new error ('session expired ')
+//           }
+//       }
+//          this should be INSIDE OF 'getTour'
+//       */
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

@@ -1,0 +1,7 @@
+note: when we define 4 parameters expres will automatically
+     reconizes it is an error handeling middleware
+
+
+note: when we pass an function  to "next()" object and express
+     will automatically understand it is an error and it will thorw 
+     and skip all the middleware stacks and send the error to the global error handeler middleware 

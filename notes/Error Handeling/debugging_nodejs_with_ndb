@@ -1,0 +1,3 @@
+what is debugging?
+the fundamental aspect of debugging is to set breakpoints
+--> breakpoints are basically in our code that we can define in debugger where our code stop debugging 

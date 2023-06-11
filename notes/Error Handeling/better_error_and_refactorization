@@ -1,0 +1,8 @@
+ why 
+ super(message)  ==== because this only accepts the buildin parameters (in simple : calling errors).
+ startsWith ==== shows first word value which is assigned to it
+ isOperational === all of the errors get this property set to true so we can test this property and only send error message back
+                    to the client for operational errors that we created using this class.
+ stackTract == err.stack === show where the error happens     
+ Error.captureStackTrace  === when a new object is created and a constructor function is called then the function call is not ganna appear
+                    in the stackTrace and not gonna pollute it. 
